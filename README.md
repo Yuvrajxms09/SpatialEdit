@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <a href="https://arxiv.org/pdf/2505.13031"><img src='https://img.shields.io/badge/MindOmni-Paper-red?logo=bookstack&logoColor=red'></a>
+</p>
+
+<p align="center">
   🤗 <a href="https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit">Training Data</a> &nbsp;•&nbsp;
   🧠 <a href="https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit">Model Weights</a> &nbsp;•&nbsp;
   🖼️ <a href="https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit">Benchmark Images</a>
@@ -21,14 +25,14 @@ Image spatial editing performs geometry-driven transformations, allowing precise
 Our contributions are three-fold:
 
 1. We introduce **SpatialEdit-Bench**, a complete benchmark that evaluates spatial editing by jointly measuring perceptual plausibility and geometric fidelity via viewpoint reconstruction and framing analysis.
-2. To address the data bottleneck for scalable training, we construct **SpatialEdit-50K**, a synthetic dataset generated with a controllable Blender pipeline that renders objects across diverse backgrounds and systematic camera trajectories, providing precise ground-truth transformations for both object- and camera-centric operations.
+2. To address the data bottleneck for scalable training, we construct **SpatialEdit-500K**, a synthetic dataset generated with a controllable Blender pipeline that renders objects across diverse backgrounds and systematic camera trajectories, providing precise ground-truth transformations for both object- and camera-centric operations.
 3. Building on this data, we develop **SpatialEdit-16B**, a baseline model for fine-grained spatial editing. Our method achieves competitive performance on general editing while substantially outperforming prior methods on spatial manipulation tasks.
 
 ## 🔗 Resources
 
 | Resource | Description | Link |
 | --- | --- | --- |
-| 🧪 Training Data | SpatialEdit-50K synthetic training set for scalable fine-grained spatial editing | 🤗[Hugging Face](https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit) |
+| 🧪 Training Data | SpatialEdit-500K synthetic training set for scalable fine-grained spatial editing | 🤗[Hugging Face](https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit) |
 | 🧠 Model Weights | SpatialEdit-16B checkpoints for image spatial editing | 🤗[Hugging Face](https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit) |
 | 🖼️ Benchmark Images | SpatialEdit-Bench benchmark images and evaluation assets | 🤗[Hugging Face](https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit) |
 
@@ -44,11 +48,11 @@ SpatialEdit-Bench evaluates both object-centric and camera-centric edits. The be
 
 ![SpatialEdit-Bench Results](assets/spatialedit_bench_result.png)
 
-## 🏗️ SpatialEdit-50K Data Engine
+## 🏗️ SpatialEdit-500K Data Engine
 
-To support scalable training and controlled evaluation, SpatialEdit-50K is built with a synthetic rendering pipeline that systematically varies object pose, placement, and camera trajectories over diverse scenes.
+To support scalable training and controlled evaluation, SpatialEdit-500K is built with a synthetic rendering pipeline that systematically varies object pose, placement, and camera trajectories over diverse scenes.
 
-![SpatialEdit-50K Data Engine](assets/data_engine.png)
+![SpatialEdit-500K Data Engine](assets/data_engine.png)
 
 ## 🎨 Visual Comparisons
 
@@ -79,7 +83,7 @@ Qualitative comparisons highlight the advantage of SpatialEdit on fine-grained s
   <img src="assets/application/camera/video.gif" width="31%" />
 </p>
 
-✨ Given the first and last frames, our system leverages a video generation model to synthesize an engaging camera-transition video that smoothly connects the endpoints while preserving scene realism and subject consistency.
+✨ Given the first frame, our editing model first produces the target second frame, and a video generation model then synthesizes an engaging camera-transition video between them while preserving scene realism and subject consistency.
 
 ### 🚶 Object Translation
 
@@ -89,7 +93,7 @@ Qualitative comparisons highlight the advantage of SpatialEdit on fine-grained s
   <img src="assets/application/moving/video.gif" width="31%" />
 </p>
 
-✨ Given the first and last frames, our system uses a video model to generate a coherent motion sequence, producing interesting object movement while keeping the scene layout and camera setup stable.
+✨ Given the first frame, our editing model first generates the target second frame, and a video generation model then produces a coherent motion sequence between the two frames while keeping the scene layout and camera setup stable.
 
 ### 🔄 Object Rotation
 
@@ -99,7 +103,7 @@ Qualitative comparisons highlight the advantage of SpatialEdit on fine-grained s
   <img src="assets/application/rotation/video.gif" width="31%" />
 </p>
 
-✨ Given the first and last frames, our system employs a video generation model to create a smooth rotational transition, yielding visually interesting motion while maintaining environmental consistency.
+✨ Given the first frame, our editing model first generates the target second frame, and a video generation model then creates a smooth rotational transition between them while maintaining environmental consistency.
 
 ## ⚙️ Installation
 
@@ -201,3 +205,5 @@ The following demo showcases our method on fine-grained spatial editing and vide
 <p align="center">
   <img src="assets/demo.gif" width="88%" />
 </p>
+
+Our data construction pipeline and benchmark experiments are built on top of the image editing model from [JoyAI-Image](https://github.com/jd-opensource/JoyAI-Image).
