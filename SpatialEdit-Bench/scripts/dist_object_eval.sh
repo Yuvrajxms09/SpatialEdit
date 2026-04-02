@@ -1,8 +1,8 @@
 RESOLUTION=1024
 
-META_FILE=/pfs/yichengxiao/data/space_edit/SpatialEdit_Bench_Meta_File.json
-SAVE=/pfs/yichengxiao/projects/SpatialEdit_github/SpatialEdit-Bench/eval_output/spatialedit
-BENCH_DATA_DIR=/pfs/yichengxiao/data/space_edit/SpatialEdit_Bench_Data
+META_FILE=SpatialEdit_Bench_Meta_File.json
+SAVE=SpatialEdit_github/SpatialEdit-Bench/eval_output/spatialedit
+BENCH_DATA_DIR=SpatialEdit_Bench_Data
 
 # run benchmark
 cd SpatialEdit-Bench/object_level_eval

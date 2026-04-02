@@ -8,7 +8,7 @@ class PretrainT2I256P(ExpConfig):
     seed: int = 42
 
     # DIT
-    dit_ckpt: str = "/pfs/yichengxiao/projects/XVideo/outputs/sft_edit_512p_mmdit_16b_qwen_wan/exp54_sp1_world256/checkpoints/global_step239500/step_239500.pth"
+    # dit_ckpt: str = "your_base_path/model"
     dit_arch_config: dict = field(default_factory=lambda: {
         "target": "src.models.mmdit.dit.Transformer3DModel",
         "params": {
@@ -35,7 +35,7 @@ class PretrainT2I256P(ExpConfig):
     # VAE
     vae_arch_config: dict = field(default_factory=lambda: {
         "target": "src.models.mmdit.vae.WanxVAE",
-        "pretrained": "/pfs/yichengxiao/huggingface/model/Wan2.1-T2V-1.3B/Wan2.1_VAE.pth",
+        "pretrained": "your_base_path/model/Wan2.1-T2V-1.3B/Wan2.1_VAE.pth",
     }
     )
     vae_precision: str = "bf16"
@@ -46,7 +46,7 @@ class PretrainT2I256P(ExpConfig):
         default_factory=lambda: {
             "target": "src.models.mmdit.text_encoder.load_text_encoder",
             "params": {
-                "text_encoder_ckpt": "/pfs/yichengxiao/huggingface/model/Qwen3-VL-8B-Instruct",
+                "text_encoder_ckpt": "your_base_path/model/Qwen3-VL-8B-Instruct",
             },
         }
     )

@@ -1,14 +1,12 @@
 #!/bin/bash
 export CUDA_LAUNCH_BLOCKING=1
 
-cd your_base_path/SpatialEdit_github/
-source /pfs/yichengxiao/miniconda3/bin/activate mllm
 
 RESOLUTION=1024
 CONFIG=your_base_path/SpatialEdit_github/configs/spatialedit_base_config.py
 CKPT=your_base_path/XVideo/outputs/sft_edit_512p_mmdit_16b_qwen_wan_space/bench_exp13_sp1_world64/checkpoints/checkpoint-5000/lora
-META_FILE=/pfs/yichengxiao/data/space_edit/SpatialEdit_Bench_Meta_File.json
-BENCH_DATA_DIR=/pfs/yichengxiao/data/space_edit/SpatialEdit_Bench_Data
+META_FILE=SpatialEdit_Bench_Meta_File.json
+BENCH_DATA_DIR=SpatialEdit_Bench_Data
 
 SAVE=SpatialEdit_github/SpatialEdit-Bench/eval_output
 echo save_path in ${SAVE}

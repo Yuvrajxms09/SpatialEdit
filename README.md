@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://arxiv.org/pdf/2505.13031"><img src='https://img.shields.io/badge/MindOmni-Paper-red?logo=bookstack&logoColor=red'></a>
+  <a href="https://arxiv.org/pdf/2505.13031"><img src='https://img.shields.io/badge/SpatialEdit-Paper-red?logo=bookstack&logoColor=red'></a>
 </p>
 
 <p align="center">
@@ -32,9 +32,9 @@ Our contributions are three-fold:
 
 | Resource | Description | Link |
 | --- | --- | --- |
-| 🧪 Training Data | SpatialEdit-500K synthetic training set for scalable fine-grained spatial editing | 🤗[Hugging Face](https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit) |
-| 🧠 Model Weights | SpatialEdit-16B checkpoints for image spatial editing | 🤗[Hugging Face](https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit) |
-| 🖼️ Benchmark Images | SpatialEdit-Bench benchmark images and evaluation assets | 🤗[Hugging Face](https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit) |
+| 🧪 Training Data | SpatialEdit-500K synthetic training set for scalable fine-grained spatial editing | 🤗[Hugging Face](https://huggingface.co/EasonXiao-888/SpatialEdit-500K) |
+| 🧠 Model Weights | SpatialEdit-16B checkpoints for image spatial editing | 🤗[Hugging Face](https://huggingface.co/EasonXiao-888/SpatialEdit) |
+| 🖼️ Benchmark Images | SpatialEdit-Bench benchmark images and evaluation assets | 🤗[Hugging Face](https://huggingface.co/EasonXiao-888/SpatialEdit-Bench) |
 
 ## 🌍 Overview
 
@@ -118,6 +118,15 @@ Notes:
 
 - `flash_attn` in `requirements.txt` requires a compatible CUDA and PyTorch environment.
 - Some config files still contain placeholder or internal paths and should be updated before running inference.
+
+## 📦 Prerequisites
+
+Before running the code, please download the required external checkpoints first:
+
+- [VGGT](https://github.com/facebookresearch/vggt): required for camera-level benchmark evaluation.
+- [YOLO26x](https://docs.ultralytics.com/models/yolo26/): required for framing evaluation. The current benchmark script expects `yolo26x.pt`.
+- [Qwen3-VL-8B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct): used as the vision-language backbone in the current config.
+- [Wan2.1-T2V-1.3B](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B): download the `Wan2.1_VAE.pth` weights used by the VAE configuration.
 
 ## 🧪 Quick Demo
 

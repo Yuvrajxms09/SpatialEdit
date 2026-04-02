@@ -96,7 +96,7 @@ class GPT4v():
             print("API key not found.")
             exit(1)
 
-        self.url = "http://gpt-proxy.jd.com/v1/chat/completions"
+        self.url = "your_url/v1/chat/completions"
         self.model_name = model_name
         self.use_encode = are_images_encoded
 
@@ -177,33 +177,4 @@ class GPT4o(GPT4v):
         super().__init__(api_key_path, are_images_encoded, model_name)
 
 if __name__ == "__main__":
-    model = GPT4o('/pfs/yichengxiao/projects/XVideo/evaluation/space_edit_evaluation/spacedit_bench/secret.env', model_name="gpt-4.1")
-    instruction = "Rotate the white and brown dog to show the front left side view."
-    object_name = "the white and brown dog"
-    image_prompt = [
-        "/pfs/yichengxiao/projects/XVideo/outputs_eval/space_edit/QwenImagedit2511/QwenImagedit2511_Run/1024p_seed42/fullset/rotate/en/image_vote_results_01_1a04bdd8-ba3c-4307-af01-7fe72e6db215_prompt_image/03.png",
-        # "/pfs/yichengxiao/data/space_edit/benchmark_evaluate_images/rotate_train/08ad182e7f5c4402a486f14402e250b3_2048_03_gt.png"    
-    ]
-    image_prompt_pil = [Image.open(img) for img in image_prompt]
-    from viescore import vie_prompts
-    def extract_view_from_instruction(instruction):
-        for k, v in vie_prompts.VIEW_PROMPT.items():
-            if v in instruction:
-                return k
-        return None
-    num_id = extract_view_from_instruction(instruction)
-    assert num_id is not None
-
-    question_prompt = vie_prompts.SC_rotate[num_id].format(object_name=object_name)
-    print(question_prompt)
-    text_prompt = "\n".join([vie_prompts._prompts_0shot_tie_rule_SC_rotate, question_prompt])
-    # text_template = "\n".join([vie_prompts._context_no_delimit, vie_prompts._prompts_0shot_two_image_edit_rule, vie_prompts._prompts_0shot_tie_rule_SC_move])
-    # text_template = "\n".join([vie_prompts._context_no_delimit, vie_prompts._prompts_0shot_tie_rule_SC_rotate])
-    # text_prompt = text_template.replace("<instruction>", instruction)
-    # text_prompt = "Is the dog facing right side?"
-    # print("text_prompt: \n", text_prompt)
-    model.use_encode = True
-    prompt = model.prepare_prompt(image_prompt_pil, text_prompt)
-    # print("prompt : \n", prompt)
-    res = model.get_parsed_output(prompt)
-    print("result : \n", res)
+    model = GPT4o('secret.env', model_name="gpt-4.1")

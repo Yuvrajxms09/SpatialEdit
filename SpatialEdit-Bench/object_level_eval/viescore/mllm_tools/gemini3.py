@@ -90,13 +90,13 @@ class Gemini3pro():
         #     print("API key not found.")
         #     exit(1)
 
-        self.url = "http://ai-api.jdcloud.com/v1/responses"
+        self.url = "your_url/v1/chat/completions"
         self.model_name = model_name
         self.use_encode = are_images_encoded
         self.client = None
         self.api_key = get_api_key(api_key_path)
         if model_name == "Gemini-2.5-flash":
-            self.client = OpenAI(api_key=self.api_key, base_url="http://ai-api.jdcloud.com/v1")
+            self.client = OpenAI(api_key=self.api_key, base_url=self.url)
 
     def prepare_prompt(self, image_links: List = [], text_prompt: str = ""):
         if self.client is not None:
