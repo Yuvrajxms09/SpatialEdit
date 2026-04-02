@@ -1,0 +1,70 @@
+__pycache__
+.ipynb_checkpoints
+*.pth
+UCF-101/
+results/
+wandb/
+*.ipynb
+*.jpg
+*.safetensors
+*.mp4
+*.png
+*.gif
+*.pth
+*.pt
+cache_dir/
+wandb/
+runs/
+samples/
+*validation/
+data/
+outputs/
+outputs_video
+sbatch.sh
+*.out
+env
+*.o
+**/build/
+**.pyc
+**.txt
+!requirements.txt
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+eggs/
+.eggs/
+
+# Sphinx documentation
+docs/_build/
+docs/source/getting_started/examples/
+docs/source/inference/examples/
+
+# VSCode
+.vscode/
+
+# DS Store
+.DS_Store
+
+# vim swap files
+*.swo
+*.swp
+
+# Python pickle files
+*.pkl
+
+outputs/
+outputs_eval/
+tmp/
+
+# Keep demo assets and validation examples versioned for the project page.
+!assets/
+!assets/**
+!validation/
+!validation/**
+assets/.DS_Store
+
+# Never commit local secrets.
+SpatialEdit-Bench/object_level_eval/secret.env
