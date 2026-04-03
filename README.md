@@ -8,15 +8,19 @@
   🧭 Fine-grained spatial editing &nbsp;|&nbsp; 🧪 Benchmarking &nbsp;|&nbsp; 🎥 Camera and object manipulation
 </p>
 
-<p align="center">
-  <a href="pdf/SpacialEditing.pdf"><img src='https://img.shields.io/badge/SpatialEdit-Paper-red?logo=bookstack&logoColor=red'></a>
-</p>
+## 🎬 Demo
+
+The following demo showcases our method on fine-grained spatial editing from spatially controlled endpoints.
+
+https://github.com/EasonXiao-888/SpatialEdit/blob/main/assets/demo.mp4
 
 <p align="center">
-  🤗 <a href="https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit">Training Data</a> &nbsp;•&nbsp;
-  🧠 <a href="https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit">Model Weights</a> &nbsp;•&nbsp;
-  🖼️ <a href="https://huggingface.co/jdopensource/JoyAI-Image-Edit/tree/main/JoyAI-Image-Edit">Benchmark Images</a>
+  <a href="pdf/SpacialEditing.pdf"><img src='https://img.shields.io/badge/SpatialEdit-Paper-red?logo=bookstack&logoColor=red'></a>
+  <a href="https://huggingface.co/EasonXiao-888/SpatialEdit-500K"><img src="https://img.shields.io/badge/SpatialEdit500K-Training%20Data-yellow?logo=huggingface&logoColor=black"></a>
+  <a href="https://huggingface.co/EasonXiao-888/SpatialEdit"><img src="https://img.shields.io/badge/SpatialEdit16B-Model%20Weights-blue?logo=huggingface&logoColor=white"></a>
+  <a href="https://huggingface.co/EasonXiao-888/SpatialEdit-Bench"><img src="https://img.shields.io/badge/SpatialEditBench-%20Images-green?logo=huggingface&logoColor=white"></a>
 </p>
+
 
 ## 📝 Abstract
 
@@ -203,11 +207,6 @@ Update the script paths and evaluation backend first:
 - The benchmark scripts assume access to external benchmark metadata, source images, and model checkpoints.
 - The repo already includes example evaluation utilities under `SpatialEdit-Bench/camera_level_eval` and `SpatialEdit-Bench/object_level_eval`.
 
-## 🎬 Demo
-
-The following demo showcases our method on fine-grained spatial editing from spatially controlled endpoints.
-
-https://github.com/EasonXiao-888/SpatialEdit/blob/main/assets/demo.mp4
 
 ## ❤️ Acknowledgement
 
