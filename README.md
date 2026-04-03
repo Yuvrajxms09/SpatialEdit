@@ -211,5 +211,8 @@ Update the script paths and evaluation backend first:
 
 ## ❤️ Acknowledgement
 
-Code in this repository is built upon several public repositories. Thanks for the wonderful work [recamaster](https://github.com/KlingAIResearch/ReCamMaster) and [TexVerse](https://github.com/yiboz2001/TexVerse) ! !
-Our resource building process and benchmark experiments contribute to the image editing model of [JoyAI-Image](https://github.com/jd-opensource/JoyAI-Image).
+Code in this repository builds upon several excellent open-source projects. We sincerely thank [ReCamMaster](https://github.com/KlingAIResearch/ReCamMaster) and [TexVerse](https://github.com/yiboz2001/TexVerse) for their outstanding contributions.
+
+We also extend our gratitude to [Yanbing Zhang](https://github.com/Monalissaa) for his valuable support throughout this project.
+
+Additionally, our resource construction pipeline and experiments have contributed to the development of the image editing model in [JoyAI-Image](https://github.com/jd-opensource/JoyAI-Image).
