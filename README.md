@@ -8,20 +8,19 @@
   🧭 Fine-grained spatial editing &nbsp;|&nbsp; 🧪 Benchmarking &nbsp;|&nbsp; 🎥 Camera and object manipulation
 </p>
 
-## 🎬 Demo
-
-The following demo showcases our method on fine-grained spatial editing from spatially controlled endpoints.
-
-
-https://github.com/user-attachments/assets/1437ba94-1609-4e81-8876-8e6a60fb4906
-
-
 <p align="center">
   <a href="pdf/SpacialEditing.pdf"><img src='https://img.shields.io/badge/SpatialEdit-Paper-red?logo=bookstack&logoColor=red'></a>
   <a href="https://huggingface.co/EasonXiao-888/SpatialEdit-500K"><img src="https://img.shields.io/badge/SpatialEdit500K-Data-yellow?logo=huggingface&logoColor=yellow"></a>
   <a href="https://huggingface.co/EasonXiao-888/SpatialEdit"><img src="https://img.shields.io/badge/SpatialEdit16B-Model-blue?logo=huggingface&logoColor=yellow"></a>
   <a href="https://huggingface.co/EasonXiao-888/SpatialEdit-Bench"><img src="https://img.shields.io/badge/SpatialEdit-Bench-green?logo=huggingface&logoColor=yellow"></a>
 </p>
+
+## 🎬 Demo
+
+The following demo showcases our method on fine-grained spatial editing from spatially controlled endpoints.
+
+
+https://github.com/user-attachments/assets/1437ba94-1609-4e81-8876-8e6a60fb4906
 
 
 ## 📝 Abstract
