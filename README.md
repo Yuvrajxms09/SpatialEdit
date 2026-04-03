@@ -12,7 +12,7 @@
   <a href="pdf/SpacialEditing.pdf"><img src='https://img.shields.io/badge/SpatialEdit-Paper-red?logo=bookstack&logoColor=red'></a>
   <a href="https://huggingface.co/EasonXiao-888/SpatialEdit-500K"><img src="https://img.shields.io/badge/SpatialEdit500K-Data-yellow?logo=huggingface&logoColor=yellow"></a>
   <a href="https://huggingface.co/EasonXiao-888/SpatialEdit"><img src="https://img.shields.io/badge/SpatialEdit16B-Model-blue?logo=huggingface&logoColor=yellow"></a>
-  <a href="https://huggingface.co/EasonXiao-888/SpatialEditBench-data"><img src="https://img.shields.io/badge/SpatialEdit-Bench-green?logo=huggingface&logoColor=yellow"></a>
+  <a href="https://huggingface.co/EasonXiao-888/SpatialEdit-Bench"><img src="https://img.shields.io/badge/SpatialEditBench-Data-green?logo=huggingface&logoColor=yellow"></a>
 </p>
 
 ## 🎬 Demo
