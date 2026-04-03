@@ -12,8 +12,6 @@
 
 The following demo showcases our method on fine-grained spatial editing from spatially controlled endpoints.
 
-https://github.com/EasonXiao-888/SpatialEdit/blob/main/assets/demo.mp4
-
 <p align="center">
   <a href="pdf/SpacialEditing.pdf"><img src='https://img.shields.io/badge/SpatialEdit-Paper-red?logo=bookstack&logoColor=red'></a>
   <a href="https://huggingface.co/EasonXiao-888/SpatialEdit-500K"><img src="https://img.shields.io/badge/SpatialEdit500K-Training%20Data-yellow?logo=huggingface&logoColor=black"></a>
