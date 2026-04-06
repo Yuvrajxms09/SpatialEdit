@@ -79,7 +79,11 @@ Qualitative comparisons highlight the advantage of SpatialEdit on fine-grained s
 
 ✨ The first and third examples show point clouds with only a single given viewpoint. The second and fourth examples are augmented by our model, which synthesizes richer spatial observations from the sparse input view.
 
-### 🎥 Camera Trajectory Editing
+### 🎥 Conditional-frames Based Video Generation:
+
+✨ Given the first frame, our editing model first performs spatial editing to produce the final frame of the video. Subsequently, the video generation model synthesizes a coherent transition sequence, while preserving scene realism and thematic consistency.
+
+## 📷 Camera Trajectory Transformation
 
 <p align="center">
   <img src="assets/application/camera/input.png" width="31%" />
@@ -87,9 +91,7 @@ Qualitative comparisons highlight the advantage of SpatialEdit on fine-grained s
   <img src="assets/application/camera/video.gif" width="31%" />
 </p>
 
-✨ Given the first frame, our editing model first produces the target second frame, and a video generation model then synthesizes an engaging camera-transition video between them while preserving scene realism and subject consistency.
-
-### 🚶 Object Translation
+## 🚶 Object Moving
 
 <p align="center">
   <img src="assets/application/moving/input.png" width="31%" />
@@ -97,17 +99,13 @@ Qualitative comparisons highlight the advantage of SpatialEdit on fine-grained s
   <img src="assets/application/moving/video.gif" width="31%" />
 </p>
 
-✨ Given the first frame, our editing model first generates the target second frame, and a video generation model then produces a coherent motion sequence between the two frames while keeping the scene layout and camera setup stable.
-
-### 🔄 Object Rotation
+## 🔄 Object Rotation
 
 <p align="center">
   <img src="assets/application/rotation/input.png" width="31%" />
   <img src="assets/application/rotation/output.png" width="31%" />
   <img src="assets/application/rotation/video.gif" width="31%" />
 </p>
-
-✨ Given the first frame, our editing model first generates the target second frame, and a video generation model then creates a smooth rotational transition between them while maintaining environmental consistency.
 
 ## ⚙️ Installation
 
