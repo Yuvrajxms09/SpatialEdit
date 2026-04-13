@@ -20,8 +20,10 @@ def build_from_config(config, **kwargs):
     params.update(kwargs)
 
     pretrained_path = config.get("pretrained", None)
-    if pretrained_path is not None and hasattr(cls, "from_pretrained"):
-        return cls.from_pretrained(pretrained_path, **params)
+    if pretrained_path is not None:
+        if hasattr(cls, "from_pretrained"):
+            return cls.from_pretrained(pretrained_path, **params)
+        params["pretrained"] = pretrained_path
 
     obj = cls(**params)
     return obj
