@@ -35,7 +35,7 @@ class PretrainT2I256P(ExpConfig):
     # VAE
     vae_arch_config: dict = field(default_factory=lambda: {
         "target": "src.models.mmdit.vae.WanxVAE",
-        "pretrained": "/content/model/Wan2.1-T2V-1.3B/Wan2.1_VAE.pth",
+        "pretrained": "your_base_path/model/Wan2.1-T2V-1.3B/Wan2.1_VAE.pth",
     }
     )
     vae_precision: str = "bf16"
@@ -46,7 +46,7 @@ class PretrainT2I256P(ExpConfig):
         default_factory=lambda: {
             "target": "src.models.mmdit.text_encoder.load_text_encoder",
             "params": {
-                "text_encoder_ckpt": "/content/model/Qwen3-VL-8B-Instruct",
+                "text_encoder_ckpt": "your_base_path/model/Qwen3-VL-8B-Instruct",
             },
         }
     )

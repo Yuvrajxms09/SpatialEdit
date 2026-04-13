@@ -640,7 +640,7 @@ def _video_vae(pretrained_path=None, z_dim=None, device='cpu', **kwargs):
 class WanxVAE(nn.Module):
     # @register_to_config
     def __init__(self,
-                 pretrained='/content/model/Wan2.1-T2V-1.3B/Wan2.1_VAE.pth',
+                 pretrained='/pfs/yichengxiao/huggingface/model/Wan2.1-T2V-1.3B/Wan2.1_VAE.pth',
                  torch_dtype=torch.float32,
                  device='cuda'
                  ):
