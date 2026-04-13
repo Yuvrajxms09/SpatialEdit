@@ -4,7 +4,7 @@ from copy import deepcopy
 
 import torch
 import torch.nn as nn
-from transformers import Qwen2Tokenizer, Qwen2_5_VLForConditionalGeneration, AutoProcessor, AutoModelForVision2Seq, Qwen3VLForConditionalGeneration
+from transformers import Qwen2Tokenizer, Qwen2_5_VLForConditionalGeneration, Qwen3VLForConditionalGeneration
 from transformers.utils import ModelOutput
 from transformers import AutoModel
 
@@ -57,10 +57,10 @@ def load_text_encoder(
 
 
 if __name__ == "__main__":
-    from transformers import AutoProcessor, AutoModelForVision2Seq
+    from transformers import AutoProcessor
 
     processor = AutoProcessor.from_pretrained("/pfs/mgq/shared_ckpts/pretrained/Qwen3-VL-8B-Instruct")
-    model = AutoModelForVision2Seq.from_pretrained("/pfs/mgq/shared_ckpts/pretrained/Qwen3-VL-8B-Instruct")
+    model = Qwen3VLForConditionalGeneration.from_pretrained("/pfs/mgq/shared_ckpts/pretrained/Qwen3-VL-8B-Instruct")
     # messages = [
     #     {
     #         "role": "user",
